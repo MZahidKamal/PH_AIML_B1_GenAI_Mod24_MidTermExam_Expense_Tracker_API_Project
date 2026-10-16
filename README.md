@@ -4,8 +4,8 @@ A production-style REST API for tracking personal **income and expenses**. Users
 
 Built as the Module 24 Mid-Term project of the Phitron AI/ML course, but deliberately taken beyond the exam requirements: a fully **asynchronous** stack, a layered feature-based architecture, **refresh-token rotation with reuse detection**, database-level safety rules, and a **198-test PyTest suite** with shareable HTML and Allure reports.
 
-🔗 **Live Demo:** [expense-tracker-api-demo.onrender.com](https://expense-tracker-api-demo.onrender.com/)
-📖 **Interactive API docs:** [/docs (Swagger UI)](https://expense-tracker-api-demo.onrender.com/docs) · [/redoc (ReDoc)](https://expense-tracker-api-demo.onrender.com/redoc)
+🔗 **Live Demo:** [ph-aiml-b1-genai-mod24-midtermexam.onrender.com/](https://ph-aiml-b1-genai-mod24-midtermexam.onrender.com/)
+📖 **Interactive API docs:** [/docs (Swagger UI)](https://ph-aiml-b1-genai-mod24-midtermexam.onrender.com/docs) · [/redoc (ReDoc)](https://ph-aiml-b1-genai-mod24-midtermexam.onrender.com/redoc)
 
 > The live service runs on a free hosting plan, so the first request after a period of inactivity can take a little longer while the server wakes up.
 
