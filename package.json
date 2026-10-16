@@ -1,0 +1,12 @@
+{
+  "name": "expense-tracker-api-test-reports",
+  "private": true,
+  "description": "Node.js tooling used only for test reports (Allure 3 CLI). The API itself is Python.",
+  "scripts": {
+    "report:allure": "allure generate ./tests/reports/allure-results",
+    "report:allure:open": "allure open ./tests/reports/allure-report"
+  },
+  "devDependencies": {
+    "allure": "3.20.1"
+  }
+}

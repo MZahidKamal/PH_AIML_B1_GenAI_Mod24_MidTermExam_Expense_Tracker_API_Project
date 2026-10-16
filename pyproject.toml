@@ -1,0 +1,53 @@
+[tool.pytest.ini_options]
+
+
+# Where pytest looks for tests
+testpaths = ["tests"]
+
+
+# Make 'src' importable from tests (same as running from the project root)
+pythonpath = ["."]
+
+
+# -ra: short summary of skipped/failed tests; --strict-*: typos in markers/config become errors
+# --html: pytest-html report (one self-contained file, easy to share)
+# --alluredir: raw Allure results (turned into an interactive report by the Allure CLI); cleaned before every run
+addopts = """
+    -ra --strict-markers --strict-config
+    --html=tests/reports/pytest-html/report.html --self-contained-html
+    --alluredir=tests/reports/allure-results --clean-alluredir
+"""
+
+
+# Every 'async def' test/fixture is handled by pytest-asyncio automatically
+asyncio_mode = "auto"
+
+
+# One event loop for the whole test session (the database engine lives on it)
+asyncio_default_fixture_loop_scope = "session"
+asyncio_default_test_loop_scope = "session"
+
+
+markers = [
+    "migrations: tests that run Alembic migrations against the test database",
+]
+
+
+[tool.coverage.run]
+source = ["src"]
+branch = true
+
+
+# SQLAlchemy async runs code inside greenlets; without this, coverage misses lines that DID run
+concurrency = ["greenlet", "thread"]
+
+
+[tool.coverage.report]
+show_missing = true
+skip_covered = false
+
+
+
+
+
+# ----------------------------------------------------------------------------------------------------------------------
