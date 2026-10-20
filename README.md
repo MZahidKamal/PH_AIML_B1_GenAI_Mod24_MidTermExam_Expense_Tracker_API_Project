@@ -11,7 +11,7 @@ Built as the Module 24 Mid-Term project of the Phitron AI/ML course, but deliber
 
 ---
 
-## Highlights
+## Project Highlights
 
 - ✅ **Fully asynchronous** request path: async SQLAlchemy 2.x sessions on the psycopg 3 driver
 - ✅ **Feature-based, layered architecture**: router → service → repository → model, each feature in its own folder
